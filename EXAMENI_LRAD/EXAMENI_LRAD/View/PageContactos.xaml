@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+              xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=netstandard"
+             x:Class="EXAMENI_LRAD.View.PageContactos">
+
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="Gainsboro">
+
+                <Label Text="INGRESE INFORMACIÓN DE CONTACTO"
+                   Margin="10,30,10,20"
+                   FontSize="35"
+                   HorizontalTextAlignment="Center"
+                   />
+            
+
+                <Label Text="NOMBRE"
+                   Margin="10,10,10,-5"
+                   />
+                <Entry x:Name="txtNombre"
+                   BackgroundColor="AliceBlue"
+                   Keyboard="Text"
+                   TextColor="Black"
+                   Margin="10,10,10,0" />
+
+                <Label Text="APELLIDOS"
+                   Margin="10,10,10,-5"
+                   />
+                
+                <Entry x:Name="txtApellidos"
+                   BackgroundColor="AliceBlue"
+                   Keyboard="Text"
+                   TextColor="Black"
+                   Margin="10,10,10,0" />
+
+                <Label Text="TELEFONO"
+                   Margin="10,10,10,-5"
+                   />
+                <Entry x:Name="txtTelefono"
+                   BackgroundColor="AliceBlue"
+                   Keyboard="Telephone"
+                   TextColor="Black"
+                   Margin="10,10,10,0"/>
+
+                <Label Text="EDAD"
+                   Margin="10,10,10,-5"
+                   />
+                <Entry x:Name="txtEdad"
+                   BackgroundColor="AliceBlue"
+                   Keyboard="Numeric"
+                   TextColor="Black"
+                   Margin="10,10,10,0" />
+
+                <Picker  x:Name="cmbPais"  
+                         Title="PAIS" 
+                         Margin="10,10,10,0" 
+                         BackgroundColor="AliceBlue">
+
+                    <Picker.Items>
+                        <x:String>HONDURAS (504)</x:String>
+                        <x:String>EL SALVADOR (503)</x:String>
+                        <x:String>GUATEMALA (502)</x:String>
+                        <x:String>NICARAGUA (505)</x:String>
+                        <x:String>COSTA RICA (506)</x:String>
+                        <x:String>PANAMÁ (507)</x:String>
+                        <x:String>BELICE (501)</x:String>
+                        <x:String>MÉXICO(52)</x:String>
+                        <x:String>CANADÁ (1)</x:String>
+                        <x:String>ESTADOS UNIDOS (1)</x:String>
+                    </Picker.Items>
+                </Picker>
+
+               
+
+                <!-- <Combobox Header="Colors" PlaceholderText="Pick a color" Width="200">
+                <x:String>Blue</x:String>
+                <x:String>Green</x:String>
+                <x:String>Red</x:String>
+                <x:String>Yellow</x:String>
+            
+            </Combobox> -->
+
+                <Label Text="LATITUD"
+                   Margin="10,10,10,-5"/>
+                <Entry x:Name="txtLatitud"
+                   Keyboard="Numeric"
+                   TextColor="Black"
+                   IsEnabled="False"
+                    Margin="10,10,10,0"/>
+
+                <Label Text="LONGITUD"
+                   Margin="10,10,10,-5"/>
+                <Entry x:Name="txtLongitud"
+                   Keyboard="Numeric"
+                   TextColor="Black"
+                   IsEnabled="False"
+                    Margin="10,10,10,0"/>
+
+
+                <Label Text="NOTA"
+                   Margin="10,10,10,-5"
+                   />
+
+
+                <Frame CornerRadius="10"  Margin="10,10,10,0" Padding="-2">
+                    <StackLayout>
+                    <Editor x:Name="txtNota"
+                   BackgroundColor="AliceBlue"
+                   Keyboard="Text"
+                   TextColor="Black"
+                    
+                   AutoSize="TextChanges"
+                   HeightRequest="100"/>
+                    </StackLayout>
+                   
+
+                </Frame>
+
+                <Button x:Name="btnSalvar" Clicked="btnSalvar_Clicked"
+                    Text="SALVAR CONTACTO"
+                    Margin="10,10,10,10"
+                    BackgroundColor="LightSalmon"
+                    />
+
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>
